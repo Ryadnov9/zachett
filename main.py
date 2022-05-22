@@ -30,7 +30,7 @@ with open('universities_' + region + '.csv', mode='w', encoding='UTF-8') as f:
     writer.writeheader()
     writer.writerows(filtered_data)
 
-with open('rectors.csv', mode='w', encoding='UTF-8') as f1:
+with open('contacts.csv', mode='w', encoding='UTF-8') as f1:
     writer = csv.DictWriter(f1, fieldnames=filtered_data2[0].keys())
     writer.writeheader()
     writer.writerows(filtered_data2)
