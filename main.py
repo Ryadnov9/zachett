@@ -11,10 +11,10 @@ if c is False:
     if x is False:
         print('Введіть інший код:')
 
-r = requests.get('https://registry.edbo.gov.ua/api/universities/?ut=1&lc=' + region + '&exp=json')
 
 print('З роком заснування між :' '1950 та 1999')
 value = str(input("Вибиріть одине із значень:"))
+r = requests.get('https://registry.edbo.gov.ua/api/universities/?ut=1&lc=' + region + '&exp=json')
 
 universities: list = r.json()
 filtered_data = [{k: row[k] for k in ['university_id', 'post_index']} for row in universities]
